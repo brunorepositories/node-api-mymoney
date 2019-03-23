@@ -1,10 +1,11 @@
-import express from'express'
 import cors from'cors'
 import helmet from'helmet'
 import morgan from'morgan'
+import express from'express'
 import bodyParser from'body-parser'
 import router from '../router/router.js'
 
+require('dotenv').config()
 
 const server = express()
 
@@ -12,7 +13,6 @@ if (process.env.NODE_ENV === 'dev' || process.env.NODE_ENV === 'test') {
 	server.use(morgan('combined'))
 }
 
-// server.use(dotenv.config())
 server.use(cors())
 server.use(helmet())
 server.use(helmet.noCache())
