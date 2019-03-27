@@ -6,8 +6,8 @@ class ErrorHandler extends Error {
 		this.mensagem = mensagem
     this.error = error
 		this.status = status
-    console.log('mensagem -----> ', mensagem)
-    console.log('error -------->', error)
+    console.log('mensagem -----> ', mensagem, 'color:green')
+    console.log('error --------> ', error, 'color:green')
 	}
 }
 
