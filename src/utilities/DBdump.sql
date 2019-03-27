@@ -5,6 +5,7 @@ CREATE TYPE tipo_lancamento AS ENUM ('R', 'D');
 create table usuario(
   id serial primary key,
   login varchar(50) unique not null,
+  senha varchar(15) not null,
   nome varchar(50) not null,
   ativo boolean not null,
   dt_criacao timestamp not null default current_timestamp,
@@ -26,7 +27,7 @@ create table pf_pj(
   usuario integer references usuario(id) not null,
   nome varchar(50) not null,
   documento integer,
-  tipo pessoa not null,
+  tipo tipo_pessoa not null,
   ativo boolean not null,
   dt_criacao timestamp not null default current_timestamp,
   dt_atualizacao timestamp not null default current_timestamp
