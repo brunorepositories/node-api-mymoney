@@ -1,3 +1,4 @@
+CREATE TYPE tipo_conta AS ENUM ('C', 'B', 'P');
 CREATE TYPE tipo_pessoa AS ENUM ('PF', 'PJ');
 CREATE TYPE tipo_lancamento AS ENUM ('R', 'D');
 
@@ -17,6 +18,7 @@ create table conta(
   usuario integer references usuario(id) not null,
   descricao varchar(50) not null,
   saldo numeric not null,
+  tipo_conta tipo_conta not null,
   ativo boolean not null,
   dt_criacao timestamp not null default current_timestamp,
   dt_atualizacao timestamp not null default current_timestamp

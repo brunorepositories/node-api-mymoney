@@ -18,7 +18,7 @@ export async function buscarEmail(login) {
 
 export async function cadastrarUsuario(usuario) {
   try {
-    const query = PreparedStatement('cadastrar-usuario', INSERT_USUARIO, [usuario.nome, usuario.login, usuario.senha, true])
+    const query = PreparedStatement('cadastrar-usuario', INSERT_USUARIO, [usuario.nome, usuario.login, usuario.senha])
     const result = await db.oneOrNone(query)
     return result
   } catch (error) {
