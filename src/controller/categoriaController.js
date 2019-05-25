@@ -25,3 +25,4 @@ export async function buscarCategorias(req, res, next) {
       next(error)
   }
 }
+

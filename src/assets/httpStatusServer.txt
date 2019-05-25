@@ -1,0 +1,85 @@
+100 : Continua
+101 : Mudando Protocolos
+102 : Processando
+200 : Ok
+201 : Criado / Gerado
+202 : Aceito
+203 : Informação Não autorizada
+204 : Sem Conteúdo
+205 : Reiniciar Conteúdo
+206 : Conteúdo Parcial
+300 : Múltipla Escolha
+301 : Redirecionado / Movido Permanentemente
+302 : Encontrado
+303 : Veja Outros
+304 : Não Modificado
+305 : Usar Proxy
+306 : Troca de Proxy
+400 : Pedido / Solicitação Inválida
+401 : Não autorizado
+402 : Pagamento Exigido
+403 : Proibido / Desconhecido
+404 : Não Encontrado
+405 : Método Não Permitido
+406 : Não Aceito
+407 : Autenticação de Proxy Necessária / Exigida
+408 : Tempo de Solicitação Esgotado
+409 : Conflito
+410 : Perdido
+411 : Duração Necessária / Exigida
+412 : Falha de Pré
+413 : Solicitação da Entidade Muito Extensa
+414 : Solicitação de URL Muito Extensa / Longa
+415 : Tipo de Mídia Não Suportado / Incompatível
+416 : Solicitação de Faixa Insatisfatória
+417 : Falha na Expectativa / Espera
+500 : Erro de Servidor Interno
+501 : Não Implementado
+502 : Porta de Entrada Ruim
+503 : Serviço Indisponível
+504 : Tempo Limite da Porta de Entrada
+505 : Versão do HTTP Não Suportada
+
+Em inglês ------------------------
+
+100 :	Continue
+101 :	Switching Protocols
+102 :	Processing
+200 :	Ok
+201 :	Created
+202 :	Accepted
+203 :	Non-Authoritative Information
+204 :	No Content
+205 :	Reset Content
+206 :	Partial Content
+300 :	Multiple Choices
+301 :	Moved Permanently
+302 :	Found
+303 :	See Other
+304 :	Not Modified
+305 :	Use Proxy
+306 :	Proxy Switch
+400 :	Bad Request
+401 :	Unauthorized
+402 :	Payment Required
+403 :	Forbidden
+404 :	Not Found
+405 :	Method Not Allowed
+406 :	Not Acceptable
+407 :	Proxy Authentication Required
+408 :	Request Time-Out
+409 :	Conflict
+410 :	Gone
+411 :	Lenght Required
+412 :	Precondition Failed
+413 :	Request Entity Too Large
+414 :	Request URL Too Large
+415 :	Unsupported Media Type
+416 :	Request Range Not Satisfiable
+417 :	Expectation Failed
+500 :	Internal Server Error
+501 :	Not Implemented
+502 :	Bad Gateway
+503 :	Service Unavailable
+504 :	Gateway Time-out
+505 :	HTTP Version Not Supported
