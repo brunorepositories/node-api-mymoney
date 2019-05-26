@@ -14,7 +14,7 @@ export async function cadastrarConta(conta, usuario) {
   }
 }
 
-export async function alterConta(conta, usuario) {
+export async function alterConta(conta) {
   try {
       const query = PreparedStatement('alterar-conta', ALTER_CONTA, [conta.conta, conta.descricao, conta.tipo, conta.saldo])
       const result = await db.oneOrNone(query)
@@ -46,9 +46,9 @@ export async function getConta(idConta) {
   }
 }
 
-export async function deleteConta(idUsuario, idConta) {
+export async function deleteConta(idConta) {
   try {
-      const query = PreparedStatement('deletar-conta', DELETE_CONTA, [idUsuario, idConta])
+      const query = PreparedStatement('deletar-conta', DELETE_CONTA, [idConta])
       console.log(query)
       const result = await db.oneOrNone(query)
       return result
@@ -57,9 +57,9 @@ export async function deleteConta(idUsuario, idConta) {
   }
 }
 
-export async function verificarVinculoConta(idUsuario, idConta) {
+export async function verificarVinculoConta(idConta) {
   try {
-      const query = PreparedStatement('verificar-vinculo-conta', VERIFICA_VINCULO_CONTA, [idUsuario, idConta])
+      const query = PreparedStatement('verificar-vinculo-conta', VERIFICA_VINCULO_CONTA, [idConta])
       console.log(query)
       const result = await db.oneOrNone(query)
       return result

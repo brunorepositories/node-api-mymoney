@@ -65,7 +65,7 @@ create table transferencia(
 create table lancamento(
   id serial primary key,
   usuario integer references usuario(id) not null,
-  categoria integer references categoria(id) not null,
+  sub_categoria integer references sub_categoria(id) not null,
   conta integer references conta(id) not null,
   pf_pj integer references pf_pj(id),
   referencia integer references lancamento(id),

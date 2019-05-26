@@ -17,10 +17,9 @@ export async function criarConta(req, res, next) {
 
 export async function alterarConta(req, res, next) {
    const { ...conta } = req.body
-   const idUsuario = req.headers.usuario
    try {
-      await alterConta(conta, idUsuario)
-      return res.status(status.OK).json('Cota alterada!')
+      await alterConta(conta)
+      return res.status(status.OK).json('Conta alterada!')
    } catch (error) {
       console.log(error)
       next(error)
@@ -51,13 +50,12 @@ export async function buscarConta(req, res, next) {
 
 export async function deletarConta(req, res, next) {
    const idConta = req.params.idConta
-   const idUsuario = req.headers.usuario
    try {
-      const acept = await verificarVinculoConta(idUsuario, idConta)
+      const acept = await verificarVinculoConta(idConta)
       if (acept) {
          return res.status(status.NON_AUTHORITATIVE_INFORMATION).json('Conta possui algum vinculo!')
       } else {
-         await deleteConta(idUsuario, idConta)
+         await deleteConta(idConta)
          return res.status(status.OK).json('Conta deletada!')
       }
    } catch (error) {

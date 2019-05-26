@@ -1,7 +1,7 @@
 import express from 'express'
 import { criarUsuario } from '../controller/usuarioController';
 import { criarConta, buscarTodasContas, deletarConta, buscarConta, alterarConta } from '../controller/contaController';
-import { criarCategoria, buscarCategorias } from '../controller/categoriaController';
+import { criarCategoria, buscarTodasCategorias, alterarCategoria, buscarCategoria, deletarCategoria } from '../controller/categoriaController';
 const router = express.Router()
 
 // Usuário
@@ -16,7 +16,9 @@ router.delete('/conta/deletar/:idConta', deletarConta)
 
 // Categoria
 router.post('/categoria/criar', criarCategoria)
-router.get('/categoria/buscar/:id', buscarCategorias)
-
+router.put('/categoria/alterar', alterarCategoria)
+router.get('/categoria/buscar/todas', buscarTodasCategorias)
+router.get('/categoria/buscar/:idCategoria', buscarCategoria)
+router.delete('/categoria/deletar/:idCategoria', deletarCategoria)
 
 export default router
