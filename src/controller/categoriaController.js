@@ -40,8 +40,8 @@ export async function buscarTodasCategorias(req, res, next) {
 export async function buscarCategoria(req, res, next) {
    const idCategoria = req.params.idCategoria
    try {
-      const conta = await getCategoria(idCategoria)
-      return res.status(status.OK).json(conta)
+      const categoria = await getCategoria(idCategoria)
+      return res.status(status.OK).json(categoria)
    } catch (error) {
       console.log(error)
       next(error)
